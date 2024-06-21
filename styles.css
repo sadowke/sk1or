@@ -120,10 +120,3 @@ button {
     background-color: #00c; /* Slightly darker blue on hover */
     color: #fff; /* White text on hover */
 }
-
-@media (max-width: 768px) {
-    .buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-}
