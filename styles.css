@@ -103,6 +103,11 @@ button {
     object-fit: cover;
 }
 
+.button-container {
+    display: flex;
+    gap: 10px; /* Adjust the gap as needed */
+}
+
 .glow-button {
     background-color: #00ffff; /* Blue background */
     color: #000; /* Black text */
