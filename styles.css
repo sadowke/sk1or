@@ -1,136 +1,60 @@
-body {
-    margin: 0;
-    font-family: 'Raleway', sans-serif;
-    background-color: #121212;
-    color: #00ffff; /* Light blue color */
-    overflow-x: hidden;
-    direction: rtl; /* Right-to-left direction for Arabic language */
-    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff;
-}
+‏<!DOCTYPE html>‏<!DOCTYPE html>
+‏<html lang="en">
+‏<head>
+‏    <meta charset="UTF-8">
+‏    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+‏    <title>My Social Page</title>
+‏    <link rel="stylesheet" href="styles.css">
+‏</head>
+‏<body>
+‏    <header>
+‏        <div class="background-gif"></div>
+‏        <div class="overlay"></div>
+‏        <div class="container">
+‏            <h1>Welcome to My Page</h1>
+‏            <p>Follow me on my social media accounts</p>
+‏            <nav>
+‏                <ul>
+‏                    <li><a href="https://www.instagram.com/_real_rnzd" target="_blank" class="glow-button">Instagram</a></li>
+‏                    <li><a href="https://www.snapchat.com/add/sk1or" target="_blank" class="glow-button">Snapchat</a></li>
+‏                    <li><a href="https://www.tiktok.com/@sk1or" target="_blank" class="glow-button">TikTok</a></li>
+‏                    <li><a href="https://www.your-link-here.com" target="_blank" class="glow-button">Link</a></li>
+‏                </ul>
+‏            </nav>
+‏            <div class="buttons">
+‏                <button id="toggle-audio" class="glow-button">Play</button>
+‏                <a href="https://www.google.com" target="_blank" class="glow-button">Link 2</a>
+‏            </div>
+‏            <audio id="audio">
+‏                <source src="path-to-your-audio-file.mp3" type="audio/mpeg">
+‏                <source src="path-to-your-audio-file.wav" type="audio/wav">
+‏                <source src="path-to-your-audio-file.ogg" type="audio/ogg">
+‏                Your browser does not support the audio tag.
+‏            </audio>
+‏            <div class="gif-container">
+‏                <div class="gif-row">
+‏                    <img src="path-to-gif1.gif" alt="GIF 1">
+‏                    <img src="path-to-gif2.gif" alt="GIF 2">
+‏                    <img src="path-to-gif3.gif" alt="GIF 3">
+‏                    <img src="path-to-gif4.gif" alt="GIF 4">
+‏                </div>
+‏                <div class="gif-row">
+‏                    <img src="path-to-gif5.gif" alt="GIF 5">
+‏                    <img src="path-to-gif6.gif" alt="GIF 6">
+‏                    <img src="path-to-gif7.gif" alt="GIF 7">
+‏                    <img src="path-to-gif8.gif" alt="GIF 8">
+‏                </div>
+‏            </div>
+‏        </div>
+‏    </header>
 
-header {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: url('path-to-your-background.gif') no-repeat center center fixed;
-    background-size: cover;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-}
-
-.container {
-    position: relative;
-    z-index: 2;
-    max-width: 1200px;
-    padding: 20px;
-}
-
-h1 {
-    font-size: 48px;
-    margin: 0 0 20px;
-    font-weight: 700;
-    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff;
-}
-
-p {
-    font-size: 24px;
-    margin: 0 0 40px;
-    font-weight: 400;
-    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-nav ul li {
-    margin: 0;
-}
-
-nav ul li a img,
-button img {
-    width: 30px; /* Adjust size as needed */
-    height: 30px; /* Adjust size as needed */
-    transition: transform 0.3s ease;
-}
-
-nav ul li a img:hover,
-button img:hover {
-    transform: scale(1.1);
-}
-
-button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-.buttons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.gif-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.gif-row {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.gif-row img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-}
-
-.glow-button {
-    background-color: #00ffff; /* Blue background */
-    color: #000; /* Black text */
-    padding: 10px; /* Add padding */
-    border-radius: 5px;
-    text-decoration: none;
-    display: inline-block;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    margin: 10px; /* Add margin to space out buttons */
-    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff;
-    box-shadow: 0 0 10px #00ffff; /* Add a glowing box shadow */
-}
-
-.glow-button:hover {
-    background-color: #00c; /* Slightly darker blue on hover */
-    color: #fff; /* White text on hover */
-}
-
-@media (max-width: 768px) {
-    .buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-}
+‏    <script>
+‏        document.getElementById('toggle-audio').addEventListener('click', function() {
+‏            var audio = document.getElementById('audio');
+‏            if (audio.paused) {
+‏                audio.play();
+            }
+        });
+‏    </script>
+‏</body>
+‏</html>
