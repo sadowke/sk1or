@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #1f1f1f; /* Dark background color */
-    color: #d4af37; /* Goldenrod text color */
+    color: #00bfff; /* Bright blue text color */
 }
 
 header {
@@ -54,7 +54,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #d4af37; /* Goldenrod */
+    color: #00bfff; /* Bright blue */
     font-size: 1.2rem;
 }
 
@@ -63,7 +63,7 @@ nav ul li a:hover {
 }
 
 .audio-control {
-    margin-top: 20px;
+    display: none; /* Hide the default audio controls */
 }
 
 .link-input {
@@ -79,14 +79,26 @@ nav ul li a:hover {
     width: 100%;
     padding: 10px;
     font-size: 1rem;
-    border: 1px solid #d4af37; /* Goldenrod border */
+    border: 1px solid #00bfff; /* Bright blue border */
     background-color: transparent;
-    color: #d4af37; /* Goldenrod text */
+    color: #00bfff; /* Bright blue text */
 }
 
 .link-input input:focus {
     outline: none;
     border-color: #ffffff; /* White border on focus */
+}
+
+.gif-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.gif-container img {
+    width: calc(25% - 20px); /* Four gifs per row with margin */
+    margin: 10px;
 }
 
 /* Media query for responsive design */
@@ -97,5 +109,9 @@ nav ul li a:hover {
 
     p {
         font-size: 1.2rem;
+    }
+
+    .gif-container img {
+        width: calc(50% - 20px); /* Two gifs per row with margin */
     }
 }
