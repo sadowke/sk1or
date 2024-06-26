@@ -17,6 +17,10 @@ header {
     text-align: center;
 }
 
+header h1 {
+    color: rgba(255, 255, 255, 0.7); /* لون النص أبيض وشفاف قليلاً */
+}
+
 main {
     margin: 20px;
 }
