@@ -53,7 +53,7 @@
 
         document.getElementById('playButton').addEventListener('click', function() {
             buttonPlaySound.play();
-            this.disabled = true; // تعطيل الزر بعد الضغط عليه
+            this.style.display = 'none'; // إخفاء الزر بعد الضغط عليه
         });
 
         // وظيفة لتحميل الملفات باستخدام جافا سكريبت
