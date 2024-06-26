@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متصفح خاص</title>
+    <link rel="stylesheet" href="file2.css">
+</head>
+<body>
+    <header>
+        <h1>sk1or</h1>
+    </header>
+    <main>
+        <section>
+            <h2>الملفات التحميل</h2>
+            <ul>
+                <li><a href="test.zip" download>تحميل ملف 1</a></li>
+                <li><a href="files/ملف2.pdf" download>تحميل ملف 2</a></li>
+                <!-- أضف المزيد من الملفات حسب الحاجة -->
+            </ul>
+        </section>
+        <section class="button-container">
+            <button id="playButton">Play</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; . صفحة للكمبيوتر.</p>
+    </footer>
+    <!-- تضمين Howler.js -->
+    <script src="https://cdn.jsdelivr.net/npm/howler@2.2.3/dist/howler.min.js"></script>
+    <script>
+        // إنشاء كائن صوت تلقائي التشغيل باستخدام Howler.js
+        var autoPlaySound = new Howl({
+          src: ['audio/sadowke.mp3', 'audio/sadowke.ogg', 'audio/sadowke.wav'],
+          autoplay: true,
+          loop: true,
+          volume: 1.0, // تعيين الصوت إلى الحد الأقصى
+          onplayerror: function() {
+            console.error('Unable to play sound');
+          }
+        });
+
+        // إنشاء كائن صوت للتحكم عبر زر باستخدام Howler.js
+        var buttonPlaySound = new Howl({
+          src: ['audio/sadowke2.mp3', 'audio/sadowke2.ogg', 'audio/sadowke2.wav'],
+          autoplay: false,
+          loop: true,
+          volume: 1.0, // تعيين الصوت إلى الحد الأقصى
+          onplayerror: function() {
+            console.error('Unable to play sound');
+          }
+        });
+
+        document.getElementById('playButton').addEventListener('click', function() {
+            buttonPlaySound.play();
+            this.disabled = true; // تعطيل الزر بعد الضغط عليه
+        });
+    </script>
+</body>
+</html>

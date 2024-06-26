@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    direction: rtl; /* لجعل النصوص باللغة العربية */
+    background-image: url('sadowke.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+main {
+    margin: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+a {
+    color: rgba(0, 123, 255, 0.7); /* لون النص أزرق وشفاف قليلاً */
+    background-color: rgba(128, 128, 128, 0.3); /* لون الخلفية رصاصي وشفاف قليلاً */
+    border-radius: 5px;
+    transition: color 0.3s, background-color 0.3s; /* إضافة تأثير التحول */
+}
+
+a:hover {
+    text-decoration: underline;
+    background-color: rgba(128, 128, 128, 0.5); /* زيادة الشفافية عند التمرير */
+}
+
+a:active {
+    color: rgba(173, 216, 230, 1); /* لون النص أزرق فاتح عند الضغط */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+button {
+    font-size: 16px;
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.5); /* لون رصاصي شفاف قليلاً */
+    border: none;
+    color: rgba(255, 255, 255, 0.7); /* لون النص أبيض وشفاف قليلاً */
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: rgba(128, 128, 128, 0.7); /* زيادة الشفافية عند التمرير */
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
