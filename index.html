@@ -22,15 +22,9 @@
                 </ul>
             </nav>
             <div class="buttons">
-                <button id="toggle-audio" class="glow-button">Play</button>
                 <a href="#" target="_blank" class="glow-button">Link 2</a>
+                <a href="#" target="_blank" class="glow-button">Link 1</a>
             </div>
-            <audio id="audio">
-                <source src="path-to-your-audio-file.mp3" type="audio/mpeg">
-                <source src="path-to-your-audio-file.wav" type="audio/wav">
-                <source src="path-to-your-audio-file.ogg" type="audio/ogg">
-                Your browser does not support the audio tag.
-            </audio>
             <div class="gif-container">
                 <div class="gif-row">
                     <img src="path-to-gif1.gif" alt="GIF 1">
@@ -48,13 +42,9 @@
         </div>
     </header>
 
-    <script>
-        document.getElementById('toggle-audio').addEventListener('click', function() {
-            var audio = document.getElementById('audio');
-            if (audio.paused) {
-                audio.play();
-            }
-        });
-    </script>
+    <!-- تضمين ملف الموسيقى -->
+    <script src="https://cdn.jsdelivr.net/npm/howler@2.2.3/dist/howler.min.js"></script>
+    <script src="music.js"></script>
+
 </body>
 </html>
