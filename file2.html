@@ -14,8 +14,8 @@
         <section>
             <h2>الملفات التحميل</h2>
             <ul>
-                <li><a href="test.zip" download>تحميل ملف 1</a></li>
-                <li><a href="files/ملف2.pdf" download>تحميل ملف 2</a></li>
+                <li><a href="javascript:void(0)" onclick="downloadFile('test.zip')">تحميل ملف 1</a></li>
+                <li><a href="javascript:void(0)" onclick="downloadFile('files/ملف2.pdf')">تحميل ملف 2</a></li>
                 <!-- أضف المزيد من الملفات حسب الحاجة -->
             </ul>
         </section>
@@ -55,6 +55,16 @@
             buttonPlaySound.play();
             this.disabled = true; // تعطيل الزر بعد الضغط عليه
         });
+
+        // وظيفة لتحميل الملفات باستخدام جافا سكريبت
+        function downloadFile(filePath) {
+            var link = document.createElement('a');
+            link.href = filePath;
+            link.download = filePath.split('/').pop();
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
     </script>
 </body>
 </html>
