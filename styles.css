@@ -1,0 +1,48 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+#bgVideo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.links {
+    margin-top: 20px;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: background-color 0.3s, border-color 0.3s;
+    margin: 0 10px;
+}
+
+.links a:hover {
+    background-color: white;
+    color: black;
+    border-color: black;
+}
