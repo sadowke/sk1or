@@ -2,9 +2,9 @@ body {
     margin: 0;
     font-family: 'Raleway', sans-serif;
     background-color: #121212;
-    color: #00ffff; /* Light blue color */
+    color: #00ffff;
     overflow-x: hidden;
-    direction: rtl; /* Right-to-left direction for Arabic language */
+    direction: rtl;
     text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff;
 }
 
@@ -68,8 +68,8 @@ nav ul li {
 
 nav ul li a img,
 button img {
-    width: 30px; /* Adjust size as needed */
-    height: 30px; /* Adjust size as needed */
+    width: 30px;
+    height: 30px;
     transition: transform 0.3s ease;
 }
 
@@ -104,19 +104,19 @@ button {
 }
 
 .glow-button {
-    background-color: #00ffff; /* Blue background */
-    color: #000; /* Black text */
-    padding: 10px; /* Add padding */
+    background-color: #00ffff;
+    color: #000;
+    padding: 10px;
     border-radius: 5px;
     text-decoration: none;
     display: inline-block;
     transition: background-color 0.3s ease, color 0.3s ease;
-    margin: 10px; /* Add margin to space out buttons */
+    margin: 10px;
     text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff;
-    box-shadow: 0 0 10px #00ffff; /* Add a glowing box shadow */
+    box-shadow: 0 0 10px #00ffff;
 }
 
 .glow-button:hover {
-    background-color: #00c; /* Slightly darker blue on hover */
-    color: #fff; /* White text on hover */
+    background-color: #00c;
+    color: #fff;
 }
