@@ -14,9 +14,9 @@
         <section>
             <h2>الملفات التحميل</h2>
             <ul>
-                <li><a href="javascript:void(0)" onclick="downloadFile('sk1or/sk1or.rar')">pcsx2+ds4 تحميل</a></li>
-                <li><a href="javascript:void(0)" onclick="downloadFile('https://github.com/username/repo/raw/main/sk1or.rar')">تحميل ملف 2</a></li>
-‎                <!-- أضف المزيد من الملفات حسب الحاجة -->
+                <li><a href="javascript:void(0)" onclick="downloadFile('sk1or.rar')">pcsx2+ds4 تحميل</a></li>
+                <li><a href="javascript:void(0)" onclick="downloadFile('files/ملف2.pdf')">تحميل ملف 2</a></li>
+                <!-- أضف المزيد من الملفات حسب الحاجة -->
             </ul>
         </section>
         <section class="button-container">
@@ -36,10 +36,10 @@
             </a>
         </div>
     </footer>
-‎    <!-- تضمين Howler.js -->
+    <!-- تضمين Howler.js -->
     <script src="https://cdn.jsdelivr.net/npm/howler@2.2.3/dist/howler.min.js"></script>
     <script>
-‎        // إنشاء كائن صوت تلقائي التشغيل باستخدام Howler.js
+        // إنشاء كائن صوت تلقائي التشغيل باستخدام Howler.js
         var autoPlaySound = new Howl({
           src: ['audio/sadowke.mp3', 'audio/sadowke.ogg', 'audio/sadowke.wav'],
           autoplay: true,
@@ -50,7 +50,7 @@
           }
         });
 
-‎        // إنشاء كائن صوت للتحكم عبر زر باستخدام Howler.js
+        // إنشاء كائن صوت للتحكم عبر زر باستخدام Howler.js
         var buttonPlaySound = new Howl({
           src: ['audio/sadowke.mp3', 'audio/sadowke.ogg', 'audio/sadowke.wav'],
           autoplay: false,
@@ -66,27 +66,14 @@
             this.style.display = 'none'; // إخفاء الزر بعد الضغط عليه
         });
 
-‎        // وظيفة لتحميل الملفات باستخدام XMLHttpRequest
+        // وظيفة لتحميل الملفات باستخدام جافا سكريبت
         function downloadFile(filePath) {
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', filePath, true);
-            xhr.responseType = 'blob';
-
-            xhr.onload = function() {
-                if (xhr.status === 200) {
-                    var blob = xhr.response;
-                    var url = window.URL.createObjectURL(blob);
-
-                    var link = document.createElement('a');
-                    link.href = url;
-                    link.download = filePath.split('/').pop();
-                    document.body.appendChild(link);
-                    link.click();
-                    document.body.removeChild(link);
-                }
-            };
-
-            xhr.send();
+            var link = document.createElement('a');
+            link.href = filePath;
+            link.download = filePath.split('/').pop();
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         }
     </script>
 </body>
